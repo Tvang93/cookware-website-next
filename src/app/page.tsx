@@ -1,6 +1,8 @@
 import React from "react";
 import NavbarComponent from "@/components/navbarComponent";
 import ColorSelectionComponent from "@/components/ColorSelectionComponent";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookF, faInstagram, faLinkedinIn, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const page = () => {
   const startCookingCards = (num: number, text: string) => {
@@ -91,24 +93,24 @@ const page = () => {
         </div>
       </div>
       {/* Footer */}
-      <div className="bg-[#1e2c20] ps-29 pe-40">
+      <div className="bg-[#1e2c20] ps-29 pe-40 pt-23 pb-18.5">
         <div className="flex justify-between">
           <div className="grid lg:grid-cols-3 gap-15">
-            <ul className="text-white flex flex-col items-start">
+            <ul className="text-white flex flex-col items-start gap-3.5">
               <h1 className="font-bold text-xl">ABOUT OUR HOME</h1>
               <li className="font-extralight">ABOUT US</li>
               <li className="font-extralight">CAREER</li>
               <li className="font-extralight">PRIVACY</li>
               <li className="font-extralight">MEDIA RELATION</li>
             </ul>
-            <ul className="text-white flex flex-col items-start">
+            <ul className="text-white flex flex-col items-start gap-3.5">
               <h1 className="font-bold text-xl">PRODUCTS</h1>
               <li className="font-extralight">COOKWARE</li>
               <li className="font-extralight">BAKEWARE</li>
               <li className="font-extralight">BEST SELLERS</li>
               <li className="font-extralight">ACCESSORIES</li>
             </ul>
-            <ul className="text-white flex flex-col items-start">
+            <ul className="text-white flex flex-col items-start gap-3.5">
               <h1 className="font-bold text-xl">CUSTOMER SERVICE</h1>
               <li className="font-extralight">CONTACT US</li>
               <li className="font-extralight">ORDER STATUS</li>
@@ -116,10 +118,43 @@ const page = () => {
               <li className="font-extralight">FAQS</li>
             </ul>
           </div>
-          <div>
-            <p>Subscribe to our newsletter to be the first to know about new products and special events.</p>
-            <div>
-              <input type="email" placeholder="Enter" />
+          <div className="flex flex-col gap-3.5">
+            <p className="text-white w-100">Subscribe to our newsletter to be the first to know about new products and special events.</p>
+            <div className="flex gap-1">
+              <input 
+              type="email" 
+              placeholder="Enter email address" 
+              className="bg-[#efefef] p-2 outline-none"
+              />
+              <button className="border-white border-1 text-center text-white h-10.5 w-39 enabled:cursor-pointer">
+                Subscribe
+              </button>
+            </div>
+            <div className="flex gap-2.5">
+              <FontAwesomeIcon 
+              icon={faFacebookF}
+              color="white"
+              size="2x"
+              className="max-h-8 w-10"
+              />
+              <FontAwesomeIcon 
+              icon={faTwitter}
+              color="white"
+              size="2x"
+              className="max-h-8 w-10"
+              />
+              <FontAwesomeIcon 
+              icon={faInstagram}
+              color="white"
+              size="2x"
+              className="max-h-8 w-10"
+              />
+              <FontAwesomeIcon 
+              icon={faLinkedinIn}
+              color="white"
+              size="2x"
+              className="max-h-8 w-10"
+              />
             </div>
           </div>
         </div>
