@@ -21,7 +21,7 @@ const page = () => {
             alt={text}
           />
         </div>
-        <h2 className="text-4xl mt-4.5 font-bold">{text}</h2>
+        <h2 className="text-3xl mt-4.5 font-bold">{text}</h2>
       </div>
     );
   };
@@ -36,7 +36,7 @@ const page = () => {
       <div className="relative pt-34">
         <img src="/assets/hero.jpg" alt="hero img" />
         <div className="absolute bg-[rgba(0,0,0,0.6)] bottom-20 left-28 p-10">
-          <p className="text-white text-4xl">Cookware Built To Last</p>
+          <p className="text-white text-3xl">Cookware Built To Last</p>
         </div>
       </div>
       {/* Sale Bar */}
@@ -69,7 +69,7 @@ const page = () => {
                   alt="placing crock pot in oven"
                 />
               </div>
-              <h1 className="text-4xl font-bold mt-6">Fall Collection</h1>
+              <h1 className="text-3xl font-bold mt-6">Fall Collection</h1>
               <p className="mt-4">
                 Our 2023 Fall Collection just came out with beautiful autumn
                 color cookware.
@@ -82,7 +82,7 @@ const page = () => {
               <div className="hover:brightness-75 overflow-hidden lg:h-118 2xl:h-158  @min-[1600px]:w-201">
                 <img src="/assets/NewArrivals2.jpg" alt="wok with food" />
               </div>
-              <h1 className="text-4xl font-bold mt-6">Nonstick Wok 14 inch</h1>
+              <h1 className="text-3xl font-bold mt-6">Nonstick Wok 14 inch</h1>
               <p className="mt-4">
                 The nonstick wok is one of our most popular cookware. Perfect
                 for everyday stir fry.
@@ -103,7 +103,7 @@ const page = () => {
                     alt="red stock pot"
                   />
                 </div>
-                <h1 className="text-4xl font-bold mt-6">Stock Pot</h1>
+                <h1 className="text-3xl font-bold mt-6">Stock Pot</h1>
                 <p className="mt-6 max-w-84.5">
                   Our fall bakeware is back again with warm fall colors.Check
                   out our fall line of bakeware from fall colored pots to baking
@@ -123,7 +123,7 @@ const page = () => {
                   alt="blue stock pot"
                 />
               </div>
-              <h1 className="text-4xl font-bold mt-6">Stock Pot</h1>
+              <h1 className="text-3xl font-bold mt-6">Stock Pot</h1>
               <p className="mt-6 max-w-84.5">
                 The Stock Pot is a cookware that is revolutionizing the way you
                 cook! With its innovative design and advanced materials. The
@@ -145,7 +145,7 @@ const page = () => {
                   alt="sauce pan"
                 />
               </div>
-              <h1 className="text-4xl font-bold mt-6">Sauce Pan</h1>
+              <h1 className="text-3xl font-bold mt-6">Sauce Pan</h1>
               <p className="mt-6 max-w-84.5 grow">
                 The Sauce Pan is the perfect cookware for making a variety of
                 sauces, stews, soups, and more. Its stainless steel construction
@@ -160,7 +160,52 @@ const page = () => {
           </div>
         </div>
         {/* Reviews */}
-        <div></div>
+        <div className="flex flex-col items-center pb-30">
+          <h1 className="text-6xl mt-28 mb-13 font-bold">Reviews</h1>
+          <div className="flex justify-between w-full">
+            <div className="flex items-center justify-center bg-[url(/assets/Reviews1.jpg)] bg-center bg-cover rounded-[10px] w-[531px] h-[664.751px] @min-[1600px]:h-[664.751px] @min-[1600px]:w-[531px] px-14">
+              <div className="flex flex-col items-center bg-[rgb(18,18,18,0.6)] shadow-[0px_4px_4px_0px] rounded-[10px] p-[73px_28px] h-[345px]">
+                <h1 className="text-white text-3xl font-bold pb-6">
+                  Wok Star!
+                </h1>
+                <p className="text-white pb-4">
+                  I love cooking using the cast iron wok for everyday family
+                  meals. With the wok it makes the food I make turn into
+                  restaurant quality meals. I bought this wok for my parents and
+                  also siblings!
+                </p>
+                <h2 className="text-white">David Jones</h2>
+              </div>
+            </div>
+            <div className="flex items-center justify-center bg-[url(/assets/Reviews2.jpg)] bg-center bg-cover rounded-[10px] h-[664.751px] w-[531px] px-14">
+              <div className="flex flex-col items-center bg-[rgb(18,18,18,0.6)] shadow-[0px_4px_4px_0px] rounded-[10px] p-[73px_28px] h-[345px]">
+                <h1 className="text-white text-3xl font-bold pb-6">
+                  Built To Last
+                </h1>
+                <p className="text-white pb-4">
+                  Bought the cast iron pot and it lasted longer than the other
+                  brands I bought. Not only are the pots durable but the colors
+                  of the pots are so nice!
+                </p>
+                <h2 className="text-white">Danielle Johnson</h2>
+              </div>
+            </div>
+            <div className="flex items-center justify-center bg-[url(/assets/Reviews3.jpg)] bg-center bg-cover rounded-[10px] h-[664.751px] w-[531px] px-14">
+              <div className="flex flex-col items-center bg-[rgb(18,18,18,0.6)] shadow-[0px_4px_4px_0px] rounded-[10px] p-[73px_28px] h-[345px]">
+                <h1 className="text-white text-3xl font-bold pb-6">
+                  Best Cookware!
+                </h1>
+                <p className="text-white pb-4">
+                  I love all the cookware. I just bought my 4th pan and love it
+                  so much! I love the color of the pot and how durable the pots
+                  are. I've recommended the cast iron pot to all my friends and
+                  family.
+                </p>
+                <h2 className="text-white">Michelle</h2>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       {/* Footer */}
       <div className="bg-[#1e2c20] ps-29 pe-40 pt-23 pb-18.5">
