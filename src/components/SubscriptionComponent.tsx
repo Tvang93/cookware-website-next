@@ -14,7 +14,7 @@ const SubscriptionComponent = () => {
               onChange={(e)=>setEmail(e.target.value)}
               />
               <button 
-              className="border-white border-1 text-center disabled:text-white h-10.5 w-39 enabled:cursor-pointer enabled:bg-[#efefef] disabled:bg-transparent"
+              className="border-white border-1 text-center disabled:text-white h-10.5 w-39 enabled:cursor-pointer bg-[#efefef] disabled:bg-transparent hover:bg-[#1e2c20] hover:text-white hover:border-white"
               disabled={email.trim() == ''}
               >
                 Subscribe

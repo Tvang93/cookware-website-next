@@ -2,7 +2,13 @@ import React from "react";
 import NavbarComponent from "@/components/navbarComponent";
 import ColorSelectionComponent from "@/components/ColorSelectionComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebookF, faInstagram, faLinkedinIn, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebookF,
+  faInstagram,
+  faLinkedinIn,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import SubscriptionComponent from "@/components/SubscriptionComponent";
 
 const page = () => {
   const startCookingCards = (num: number, text: string) => {
@@ -10,7 +16,7 @@ const page = () => {
       <div className="flex flex-col">
         <div className="overflow-hidden rounded-lg max-h-100.5 max-w-95 hover:cursor-pointer">
           <img
-            className="w-85 h- hover:scale-125"
+            className="min-w-85 min-h-85 hover:scale-125"
             src={`/assets/StartCooking${num}.jpeg`}
             alt={text}
           />
@@ -40,7 +46,7 @@ const page = () => {
         </p>
       </div>
       {/* body */}
-      <div className="bg-[#ededed] ps-29 pe-40">
+      <div className="bg-[#ededed] ps-26 pe-36">
         {/* Start Cooking */}
         <div className="flex flex-col items-center ">
           <h1 className="text-6xl mt-28 mb-13 font-bold">Start Cooking</h1>
@@ -87,10 +93,74 @@ const page = () => {
         {/* Best Sellers */}
         <div className="flex flex-col items-center">
           <h1 className="text-6xl mt-28 mb-13 font-bold">Best Sellers</h1>
-          <div>
-            <div>cards</div>
+          <div className="grid grid-cols-3 gap-15">
+            <div className="flex flex-col">
+              <div className="flex flex-col border-1 rounded-[10px] p-6">
+                <div className="rounded-[10px] overflow-hidden max-h-84.5">
+                  <img
+                    className="rounded-[10px] max-h-84.5 w-full hover:scale-125"
+                    src="/assets/BestSeller1.jpg"
+                    alt="red stock pot"
+                  />
+                </div>
+                <h1 className="text-4xl font-bold mt-6">Stock Pot</h1>
+                <p className="mt-6 max-w-84.5">
+                  Our fall bakeware is back again with warm fall colors.Check
+                  out our fall line of bakeware from fall colored pots to baking
+                  pans.
+                </p>
+                <button className="border-1 hover:bg-[#1e2c20] hover:text-white py-2 mt-12 w-39">
+                  SHOW NOW
+                </button>
+              </div>
+              <div className="grow" />
+            </div>
+            <div className="flex flex-col border-1 rounded-[10px] p-6">
+              <div className="rounded-[10px] overflow-hidden max-h-84.5">
+                <img
+                  className="rounded-[10px] max-h-84.5 w-full hover:scale-125"
+                  src="/assets/BestSeller2.jpg"
+                  alt="blue stock pot"
+                />
+              </div>
+              <h1 className="text-4xl font-bold mt-6">Stock Pot</h1>
+              <p className="mt-6 max-w-84.5">
+                The Stock Pot is a cookware that is revolutionizing the way you
+                cook! With its innovative design and advanced materials. The
+                Stock Pot is the perfect choice for any kitchen. Its unique
+                combination of ceramic and aluminum ensures that your food cooks
+                evenly and quickly, while its non-stick coating ensures that
+                nothing sticks to the surface. Whether you're cooking for one or
+                the whole family, the Stock Pot is the perfect choice!
+              </p>
+              <button className="border-1 hover:bg-[#1e2c20] hover:text-white py-2 mt-12 w-39">
+                SHOW NOW
+              </button>
+            </div>
+            <div className="flex flex-col border-1 rounded-[10px] p-6">
+              <div className="rounded-[10px] overflow-hidden max-h-84.5">
+                <img
+                  className="rounded-[10px] h-84.5 w-full hover:scale-125"
+                  src="/assets/BestSeller3.jpg"
+                  alt="sauce pan"
+                />
+              </div>
+              <h1 className="text-4xl font-bold mt-6">Sauce Pan</h1>
+              <p className="mt-6 max-w-84.5 grow">
+                The Sauce Pan is the perfect cookware for making a variety of
+                sauces, stews, soups, and more. Its stainless steel construction
+                ensures even heat distribution for better and faster cooking. No
+                matter what you're cooking, you can count on the Sauce Pan to
+                help you cook like a pro.
+              </p>
+              <button className="border-1 hover:bg-[#1e2c20] hover:text-white py-2 mt-12 w-39">
+                SHOW NOW
+              </button>
+            </div>
           </div>
         </div>
+        {/* Reviews */}
+        <div></div>
       </div>
       {/* Footer */}
       <div className="bg-[#1e2c20] ps-29 pe-40 pt-23 pb-18.5">
@@ -98,62 +168,58 @@ const page = () => {
           <div className="grid lg:grid-cols-3 gap-15">
             <ul className="text-white flex flex-col items-start gap-3.5">
               <h1 className="font-bold text-xl">ABOUT OUR HOME</h1>
-              <li className="font-extralight">ABOUT US</li>
-              <li className="font-extralight">CAREER</li>
-              <li className="font-extralight">PRIVACY</li>
-              <li className="font-extralight">MEDIA RELATION</li>
+              <li className="font-extralight cursor-pointer">ABOUT US</li>
+              <li className="font-extralight cursor-pointer">CAREER</li>
+              <li className="font-extralight cursor-pointer">PRIVACY</li>
+              <li className="font-extralight cursor-pointer">MEDIA RELATION</li>
             </ul>
             <ul className="text-white flex flex-col items-start gap-3.5">
               <h1 className="font-bold text-xl">PRODUCTS</h1>
-              <li className="font-extralight">COOKWARE</li>
-              <li className="font-extralight">BAKEWARE</li>
-              <li className="font-extralight">BEST SELLERS</li>
-              <li className="font-extralight">ACCESSORIES</li>
+              <li className="font-extralight cursor-pointer">COOKWARE</li>
+              <li className="font-extralight cursor-pointer">BAKEWARE</li>
+              <li className="font-extralight cursor-pointer">BEST SELLERS</li>
+              <li className="font-extralight cursor-pointer">ACCESSORIES</li>
             </ul>
             <ul className="text-white flex flex-col items-start gap-3.5">
               <h1 className="font-bold text-xl">CUSTOMER SERVICE</h1>
-              <li className="font-extralight">CONTACT US</li>
-              <li className="font-extralight">ORDER STATUS</li>
-              <li className="font-extralight">RETURNS & EXCHANGE</li>
-              <li className="font-extralight">FAQS</li>
+              <li className="font-extralight cursor-pointer">CONTACT US</li>
+              <li className="font-extralight cursor-pointer">ORDER STATUS</li>
+              <li className="font-extralight cursor-pointer">
+                RETURNS & EXCHANGE
+              </li>
+              <li className="font-extralight cursor-pointer">FAQS</li>
             </ul>
           </div>
           <div className="flex flex-col gap-3.5">
-            <p className="text-white w-100">Subscribe to our newsletter to be the first to know about new products and special events.</p>
-            <div className="flex gap-1">
-              <input 
-              type="email" 
-              placeholder="Enter email address" 
-              className="bg-[#efefef] p-2 outline-none"
-              />
-              <button className="border-white border-1 text-center text-white h-10.5 w-39 enabled:cursor-pointer">
-                Subscribe
-              </button>
-            </div>
+            <p className="text-white w-100">
+              Subscribe to our newsletter to be the first to know about new
+              products and special events.
+            </p>
+            <SubscriptionComponent />
             <div className="flex gap-2.5">
-              <FontAwesomeIcon 
-              icon={faFacebookF}
-              color="white"
-              size="2x"
-              className="max-h-8 w-10"
+              <FontAwesomeIcon
+                icon={faFacebookF}
+                color="white"
+                size="2x"
+                className="max-h-8 w-10 cursor-pointer"
               />
-              <FontAwesomeIcon 
-              icon={faTwitter}
-              color="white"
-              size="2x"
-              className="max-h-8 w-10"
+              <FontAwesomeIcon
+                icon={faTwitter}
+                color="white"
+                size="2x"
+                className="max-h-8 w-10 cursor-pointer"
               />
-              <FontAwesomeIcon 
-              icon={faInstagram}
-              color="white"
-              size="2x"
-              className="max-h-8 w-10"
+              <FontAwesomeIcon
+                icon={faInstagram}
+                color="white"
+                size="2x"
+                className="max-h-8 w-10 cursor-pointer"
               />
-              <FontAwesomeIcon 
-              icon={faLinkedinIn}
-              color="white"
-              size="2x"
-              className="max-h-8 w-10"
+              <FontAwesomeIcon
+                icon={faLinkedinIn}
+                color="white"
+                size="2x"
+                className="max-h-8 w-10 cursor-pointer"
               />
             </div>
           </div>
