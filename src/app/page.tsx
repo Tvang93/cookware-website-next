@@ -210,7 +210,7 @@ const page = () => {
       {/* Footer */}
       <div className="bg-[#1e2c20] ps-29 pe-40 pt-23 pb-18.5">
         <div className="flex justify-between">
-          <div className="grid lg:grid-cols-3 gap-15">
+          <div className="grid lg:grid-cols-3">
             <ul className="text-white flex flex-col items-start gap-3.5">
               <h1 className="font-bold text-xl">ABOUT OUR HOME</h1>
               <li className="font-extralight cursor-pointer">ABOUT US</li>
